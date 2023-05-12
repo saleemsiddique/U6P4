@@ -6,33 +6,17 @@ public class DataType {
     }
     public static String gd(int code){
         int[] dateCodes = {702, 1082, 1083, 1114, 1184, 1266, 12403};
+        int[] numericCodes = {20 ,21 ,23 ,24 ,26 ,700 ,701 ,790 ,1700 ,2202 ,2203 ,2204 ,2205 ,2206 ,3734 ,3769 ,12396};
         for (int dateCode:dateCodes) {
             if (code == dateCode){
                 return "DATE";
             }
         }
-        if (
-                code == 20 ||
-                        code == 21 ||
-                        code == 23 ||
-                        code == 24 ||
-                        code == 26 ||
-                        code == 700 ||
-                        code == 701 ||
-                        code == 790 ||
-                        code == 1700 ||
-                        code == 2202 ||
-                        code == 2203 ||
-                        code == 2204 ||
-                        code == 2205 ||
-                        code == 2206 ||
-                        code == 3734 ||
-                        code == 3769 ||
-                        code == 12396
-        ) {
-            return "NUMERIC";
-        } else {
-            return "STRING";
+        for (int numericCode:numericCodes) {
+            if (code == numericCode){
+                return "NUMERIC";
+            }
         }
+        return "STRING";
     }
 }
