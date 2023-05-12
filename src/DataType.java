@@ -5,17 +5,13 @@ public class DataType {
         System.out.println(DataType.gd(0));
     }
     public static String gd(int code){
+        int[] dateCodes = {702, 1082, 1083, 1114, 1184, 1266, 12403};
+        for (int dateCode:dateCodes) {
+            if (code == dateCode){
+                return "DATE";
+            }
+        }
         if (
-                code == 702 ||
-                        code == 1082 ||
-                        code == 1083 ||
-                        code == 1114 ||
-                        code == 1184 ||
-                        code == 1266 ||
-                        code == 12403
-        ) {
-            return "DATE";
-        } else if (
                 code == 20 ||
                         code == 21 ||
                         code == 23 ||
