@@ -1,6 +1,6 @@
 public class CovidIFs {
     public static void main(String[] args) {
-        // Ejemplo de prueba
+
         float bodyTemperature = 38.5f;
         boolean difficultyBreathing = false;
         boolean diabetes = false;
@@ -10,12 +10,12 @@ public class CovidIFs {
         boolean hepatic = false;
         boolean kidneyDisease = false;
         boolean respiratoryDisease = false;
-        String province = "ABC";
+        String province = "Alicante";
 
-        String result = covid(bodyTemperature, difficultyBreathing, diabetes, cancer, isPregnant,
+        String res = covid(bodyTemperature, difficultyBreathing, diabetes, cancer, isPregnant,
                 isOver60yearsold, hepatic, kidneyDisease, respiratoryDisease, province);
 
-        System.out.println("Resultado: " + result);
+        System.out.println("Resultado: " + res);
     }
     public static String covid(float bodyTemperature, boolean difficultyBreathing, boolean diabetes, boolean cancer, boolean isPregnant, boolean isOver60yearsold, boolean hepatic, boolean kidneyDisease, boolean respiratoryDisease, String province) {
         boolean isHighTemperature = bodyTemperature >= 38;
